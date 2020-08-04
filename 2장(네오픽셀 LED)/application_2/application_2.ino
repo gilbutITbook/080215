@@ -23,7 +23,7 @@ void loop()
     colorWipe(pixels.Color(0,255,0),50); //초록색
     colorWipe(pixels.Color(0,0,255),50); //파란색
 
-    theaterChase(pixels.Color(255, 255, 255), 50); //흰색
+    theaterChase(pixels.Color(255, 255, 255),50); //흰색
     theaterChase(pixels.Color(255, 0, 0), 50);  //빨간색
     theaterChase(pixels.Color(0, 0, 255), 50);  //파란색
 
@@ -33,7 +33,7 @@ void loop()
 //하나의 컬러로 픽셀을 순차적으로 채우고 다른 색깔로 전환
 void colorWipe(uint32_t color, uint8_t wait) 
 {
-  for(uint16_t i=0; i<pixels.numPixels(); i++) 
+  for(int i=0; i<pixels.numPixels(); i++) 
   {
     pixels.setPixelColor(i, color);
     pixels.show();
